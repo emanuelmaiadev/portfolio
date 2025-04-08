@@ -19,54 +19,54 @@ export const aboutInfo = {
 export const servicesData = [
   {
     id: 1,
-    title: " Web Applications",
-    description: "Tailored web apps built with the latest technologies.",
+    title: "VeganHive (currently)",
+    description: "QA Analyst E2E test automation using Cypress, focused on software quality and CI/CD integration.",
     icon: "/images/s1.png",
   },
   {
     id: 2,
-    title: "E-commerce Websites",
+    title: "Infinity School",
     description:
-      "Secure online stores with user-friendly shopping and payments.",
-    icon: "/images/s2.png",
+      "1+ year course with hands on experience with JavaScript, NodeJS, React, TypeScript, API Development and more",
+    icon: "/images/s2.jpg",
   },
   {
     id: 3,
-    title: "API Integration",
+    title: "Computer Science Bachelor",
     description:
-      "Seamless integration for smooth data sharing and functionality.",
+      "In Progress! Studying programming fundamentals, data structures, and system architecture.",
     icon: "/images/s3.png",
   },
   {
     id: 4,
-    title: "User Interfaces",
+    title: "Udemy Courses",
     description:
-      "Engaging, responsive front-end designs for better user experiences.",
+      "Always Learning! Taking online courses focused on Cypress, React, TypeScript and more modern web dev practices.",
     icon: "/images/s4.png",
   },
   {
     id: 5,
-    title: "Database Solutions",
+    title: "Analytical Thinking",
     description:
-      "Efficient and scalable database management for your data needs.",
+      "Problem decomposition & logic. Skilled at breaking complex problems into smaller, manageable parts to find efficient, logical solutions.",
     icon: "/images/s5.png",
   },
   {
     id: 6,
-    title: "Real-Time Features",
-    description: "Add live chat, notifications, and real-time data updates.",
+    title: "Creative Problem Solving",
+    description: "Thinking outside the box. Enjoy crafting smart, unconventional solutions — especially when challenges require flexible, innovative thinking.",
     icon: "/images/s6.png",
   },
   {
     id: 7,
-    title: "Speed Optimization",
-    description: "Boost performance with faster load times and optimization.",
+    title: "Adaptability",
+    description: "Thrives in dynamic environments. Quick to learn new tools, embrace change, and adjust workflows to meet evolving project needs.",
     icon: "/images/s7.png",
   },
   {
     id: 8,
-    title: "Website Management",
-    description: "Easy content management systems with flexible controls.",
+    title: "Detail Oriented",
+    description: "Committed to writing clean and well-documented code. I catch the subtle bugs ensuring that nothing slips through the cracks",
     icon: "/images/s8.png",
   },
 ];
@@ -125,19 +125,19 @@ export const skillsData = [
     id: 2,
     title: "CSS",
     image: "/images/css.svg",
-    percent: "97%",
+    percent: "70%",
   },
   {
     id: 3,
     title: "JavaScript",
     image: "/images/js.svg",
-    percent: "77%",
+    percent: "85%",
   },
   {
     id: 4,
     title: "TypeScript",
     image: "/images/ts.svg",
-    percent: "67%",
+    percent: "50%",
   },
   {
     id: 5,
@@ -149,13 +149,13 @@ export const skillsData = [
     id: 6,
     title: "Node JS",
     image: "/images/node.svg",
-    percent: "77%",
+    percent: "60%",
   },
   {
     id: 7,
-    title: "MongoDB",
-    image: "/images/mongo.svg",
-    percent: "65%",
+    title: "NextJS",
+    image: "/images/nextjs.jpg",
+    percent: "45%",
   },
   {
     id: 8,
@@ -165,15 +165,15 @@ export const skillsData = [
   },
   {
     id: 9,
-    title: "Firebase",
-    image: "/images/firebase.svg",
+    title: "Cypress",
+    image: "/images/cypress.svg",
     percent: "75%",
   },
   {
     id: 10,
-    title: "Vue",
-    image: "/images/vue.svg",
-    percent: "35%",
+    title: "Tailwind",
+    image: "/images/tailwind.png",
+    percent: "55%",
   },
 ];
 
@@ -240,7 +240,8 @@ export const blogs = [
 ];
 
 export const contactData = {
-  phone: "+88(012345 789)",
-  email: "example@gmail.com",
-  address: "Dhaka , Bangladesh",
+  phone: "+55 85 992204871",
+  email: "emanuelmaiadev@gmail.com",
+  whatsapp:"85992204871",
+  address: "Fortaleza, Ceará , Brasil",
 };

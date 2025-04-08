@@ -5,14 +5,20 @@ import ExperienceCard from "./ExperienceCard";
 
 const Experience = () => {
   return (
-    <div className="pt-16 pb-16 bg-[#0f0715]">
+    <div id="experience" className="pt-16 pb-16 bg-[#0f0715]">
       <SectionHeading>Experiences</SectionHeading>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 w[80%] mx-auto items-center mt-20">
-        {servicesData.map((service)=>{
-          return <div key={service.id}>
-            <ExperienceCard service={service} />
-            
-          </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 w-[90%] sm:w-[80%] mx-auto items-strech mt-20">
+        {servicesData.map((service,i) => {
+          return (
+            <div
+              data-aos="fade-left"
+              data-aos-anchor-placement="top-center"
+              data-aos-delay={`${i * 100}`}
+              key={service.id}
+            >
+              <ExperienceCard service={service} />
+            </div>
+          );
         })}
       </div>
     </div>
