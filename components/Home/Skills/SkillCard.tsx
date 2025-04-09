@@ -1,4 +1,3 @@
-import { skillsData } from "@/Data/data";
 import Image from "next/image";
 import React from "react";
 

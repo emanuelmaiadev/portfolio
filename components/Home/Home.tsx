@@ -6,10 +6,9 @@ import About from './About/About'
 import Experience from './Experience/Experience'
 import Skills from './Skills/Skills'
 import Contact from './Contact/Contact'
-import AOS, { init } from 'aos'
+import AOS from 'aos';
 import 'aos/dist/aos.css'
 import { Toaster } from "react-hot-toast";
-import Footer from './Footer/Footer';
 
 
 const Home = () => {

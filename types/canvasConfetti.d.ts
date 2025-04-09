@@ -1,4 +1,15 @@
-declare module 'canvas-confetti' {
-  const confetti: any;
-  export default confetti;
+declare module "canvas-confetti" {
+  interface ConfettiOptions {
+    particleCount?: number;
+    angle?: number;
+    spread?: number;
+    origin?: {
+      x?: number;
+      y?: number;
+    };
+    colors?: string[];
+    zIndex?: number;
+  }
+
+  export default function confetti(options?: ConfettiOptions): void;
 }

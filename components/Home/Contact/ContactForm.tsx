@@ -40,6 +40,7 @@ const ContactForm = () => {
       toast.success("Thanks for reaching out! I’ll get back to you ASAP.");
       form.reset();
     } catch (err) {
+      console.error("Form submit error:", err);
       toast.error("Something went wrong. Please try again.");
     }
   };
@@ -96,9 +97,7 @@ const ContactForm = () => {
               } border-opacity-15 outline-none`}
             />
             {emailError && (
-              <p className="text-red-500 text-sm mt-1 ml-1">
-                e-mail required
-              </p>
+              <p className="text-red-500 text-sm mt-1 ml-1">e-mail required</p>
             )}
           </div>
           <input
