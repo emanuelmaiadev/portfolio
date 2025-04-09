@@ -1,59 +1,65 @@
 import { contactData } from "@/Data/data";
 import React from "react";
-import { FaEnvelope, FaMap, FaPhone, FaWhatsapp } from "react-icons/fa";
+import { FaEnvelope, FaMap, FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
+
+const contacts = [
+  {
+    title: "WhatsApp",
+    content: contactData.whatsapp,
+    href: `https://wa.me/55${contactData.whatsapp}`,
+    icon: <FaWhatsapp />,
+  },
+  {
+    title: "E-mail",
+    content: contactData.email,
+    href: `mailto:${contactData.email}`,
+    icon: <FaEnvelope />,
+  },
+  {
+    title: "Address",
+    content: contactData.address,
+    href: null,
+    icon: <FaMap />,
+  },
+  {
+    title: "LinkedIn",
+    content: "linkedin.com/in/emanuelmaiadev",
+    href: "https://www.linkedin.com/in/emanuelmaiadev",
+    icon: <FaLinkedin />,
+  },
+  {
+    title: "GitHub",
+    content: "github.com/emanuelmaiadev",
+    href: "https://github.com/emanuelmaiadev",
+    icon: <FaGithub />,
+  },
+];
 
 const ContactInfo = () => {
   return (
-    <div>
-      <div className="flex items-center space-x-8">
-        <div className="w-10 h-10 md:w-16 rounded-full bg-gradient-to-r from-emerald-500 to-emerald-900 flex items-center justify-center flex-col">
-          <FaPhone className="w-4 h-4 md:w-7 md:h-7 text-white" />
+    <div className="flex flex-col space-y-6">
+      {contacts.map(({ title, content, href, icon }, idx) => (
+        <div key={idx} className="flex items-start space-x-4">
+          {href ? (
+            <a
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-700 to-purple-900 flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:brightness-110"
+            >
+              {React.cloneElement(icon, { className: "w-5 h-5 text-white" })}
+            </a>
+          ) : (
+            <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-700 to-purple-900 flex items-center justify-center">
+              {React.cloneElement(icon, { className: "w-5 h-5 text-white" })}
+            </div>
+          )}
+          <div>
+            <p className="text-sm text-white/70">{title}</p>
+            <p className="text-base text-white break-all">{content}</p>
+          </div>
         </div>
-        <div>
-          <h1 className="text-lg sm:text-xl text-white font-bold">Phone</h1>
-          <h2 className="text-base sm:text-lg text-white text-opacity-70">
-            {contactData.phone}
-          </h2>
-        </div>
-      </div>
-      <div className="flex items-center space-x-8 mt-8">
-        <div className="w-10 h-10 md:w-16 rounded-full bg-gradient-to-r from-green-500 to-green-900 flex items-center justify-center flex-col">
-          <FaWhatsapp className="w-4 h-4 md:w-7 md:h-7 text-white" />
-        </div>
-        <div>
-          <h1 className="text-lg sm:text-xl text-white font-bold">WhatsApp</h1>
-          <a
-            href={`https://wa.me/55${contactData.whatsapp}?text=Hello%2C%20I%20came%20from%20your%20portfolio!`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-base sm:text-lg text-white text-opacity-70 hover:underline"
-          >
-            Send me a message
-          </a>
-        </div>
-      </div>
-      <div className="flex items-center space-x-8 mt-8">
-        <div className="w-10 h-10 md:w-16 rounded-full bg-gradient-to-r from-emerald-500 to-emerald-900 flex items-center justify-center flex-col">
-          <FaEnvelope className="w-4 h-4 md:w-7 md:h-7 text-white" />
-        </div>
-        <div>
-          <h1 className="text-lg sm:text-xl text-white font-bold">E-Mail</h1>
-          <h2 className="text-base sm:text-lg text-white text-opacity-70">
-            {contactData.email}
-          </h2>
-        </div>
-      </div>
-      <div className="flex items-center space-x-8 mt-8">
-        <div className="w-10 h-10 md:w-16 rounded-full bg-gradient-to-r from-emerald-500 to-emerald-900 flex items-center justify-center flex-col">
-          <FaMap className="w-4 h-4 md:w-7 md:h-7 text-white" />
-        </div>
-        <div>
-          <h1 className="text-lg sm:text-xl text-white font-bold">Address</h1>
-          <h2 className="text-base sm:text-lg text-white text-opacity-70">
-            {contactData.address}
-          </h2>
-        </div>
-      </div>
+      ))}
     </div>
   );
 };

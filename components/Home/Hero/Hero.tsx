@@ -33,15 +33,17 @@ const Hero = () => {
             >
               {BaseInfo.description}
             </p>
-            {/* Dl Cv Button */}
-            <button
+            {/* Download Resume Link */}
+            <a
+              href="/resume.pdf"
+              download
               data-aos="zoom-in"
               data-aos-delay="300"
-              className="md:px-8 md:py-2.5 px-6 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700 hover:bg-blue-900 flex items-center space-x-2"
+              className="inline-flex items-center space-x-2 md:px-8 md:py-2.5 px-6 py-1.5 text-white font-semibold text-sm md:text-lg transition-all duration-200 rounded-lg mt-8 bg-blue-700 hover:bg-blue-900"
             >
-              <span>Download Curriculum</span>
+              <span>Download Resume</span>
               <FaDownload />
-            </button>
+            </a>
           </div>
           {/* Image Content */}
           <div

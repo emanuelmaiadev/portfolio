@@ -3,7 +3,7 @@ export const BaseInfo = {
   position: "Front-End Developer and QA Analyst",
   description:
     "Hi, I’m Emanuel Maia, a Full Stack Developer focused on Front-End and QA. I work with JavaScript, React, Node.js, and testing tools like Cypress, Insomnia, and Postman. Currently, I’m a QA Analyst at Vegan Hive. Welcome and enjoy.",
-  profilePic: "/images/emanuelkatana.jpg",
+  profilePic: "/images/emanuelprofile.jpg",
 };
 
 export const aboutInfo = {
