@@ -4,7 +4,6 @@ import "./globals.css";
 import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 import Footer from "@/components/Home/Footer/Footer";
 import ScrollToTop from "@/components/Helper/ScrollToTop";
-import Cursor from "@/components/Helper/Cursor";
 
 
 const font = Sora({
@@ -25,7 +24,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${font.className}`}>
-        <Cursor />
         <ResponsiveNav />
         {children}
         <Footer />
