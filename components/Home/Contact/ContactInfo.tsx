@@ -23,7 +23,7 @@ const ContactInfo = () => {
         <div>
           <h1 className="text-lg sm:text-xl text-white font-bold">WhatsApp</h1>
           <a
-            href={`https://wa.me/55${contactData.whatsapp}`}
+            href={`https://wa.me/55${contactData.whatsapp}?text=Hello%2C%20I%20came%20from%20your%20portfolio!`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-base sm:text-lg text-white text-opacity-70 hover:underline"
