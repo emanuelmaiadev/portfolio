@@ -8,6 +8,8 @@ import Skills from './Skills/Skills'
 import Contact from './Contact/Contact'
 import AOS, { init } from 'aos'
 import 'aos/dist/aos.css'
+import { Toaster } from "react-hot-toast";
+import Footer from './Footer/Footer';
 
 
 const Home = () => {
@@ -32,6 +34,8 @@ useEffect(()=>{
       <Experience />
       <Skills />
       <Contact />
+      <Footer />
+      <Toaster position="top-center" reverseOrder={false} />
     </div>
   )
 }
