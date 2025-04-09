@@ -34,7 +34,6 @@ useEffect(()=>{
       <Experience />
       <Skills />
       <Contact />
-      <Footer />
       <Toaster position="top-center" reverseOrder={false} />
     </div>
   )
