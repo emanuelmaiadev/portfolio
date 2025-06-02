@@ -7,7 +7,7 @@ type Props = {
     id: number;
     title: string;
     image: string;
-    percent: string;
+    percent?: string;
   };
 };
 
