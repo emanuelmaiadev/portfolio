@@ -119,61 +119,51 @@ export const skillsData = [
     id: 1,
     title: "React",
     image: "/images/react.svg",
-    percent: "90%",
   },
   {
     id: 2,
     title: "CSS",
     image: "/images/css.svg",
-    percent: "70%",
   },
   {
     id: 3,
     title: "JavaScript",
     image: "/images/js.svg",
-    percent: "85%",
   },
   {
     id: 4,
     title: "TypeScript",
     image: "/images/ts.svg",
-    percent: "50%",
   },
   {
     id: 5,
     title: "HTML",
     image: "/images/html.svg",
-    percent: "67%",
   },
   {
     id: 6,
     title: "Node JS",
     image: "/images/node.svg",
-    percent: "60%",
   },
   {
     id: 7,
     title: "NextJS",
     image: "/images/nextjs.jpg",
-    percent: "45%",
   },
   {
     id: 8,
     title: "Python",
     image: "/images/python.svg",
-    percent: "55%",
   },
   {
     id: 9,
     title: "Cypress",
     image: "/images/cypress.svg",
-    percent: "75%",
   },
   {
     id: 10,
     title: "Tailwind",
     image: "/images/tailwind.png",
-    percent: "55%",
   },
 ];
 
