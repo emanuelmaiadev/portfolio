@@ -34,7 +34,7 @@ const Hero = () => {
             </p>
 
             <a
-              href="/images/resume.pdf.pdf"
+              href="/resume.pdf"
               download
               data-aos="zoom-in"
               data-aos-delay="300"
