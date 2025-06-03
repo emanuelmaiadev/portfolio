@@ -13,7 +13,7 @@ const ContactInfo = () => {
   const contacts = [
     {
       title: t.contact.whatsappLabel,
-      content: "+55 (85) 9XXXX-XXXX",
+      content: "+55 (85) 992204871",
       href: "https://wa.me/5585986",
       icon: <FaWhatsapp />
     },
