@@ -27,9 +27,9 @@ export default function RootLayout({
         <LanguageProvider>
           <ResponsiveNav />
           {children}
+          <Footer />
+          <ScrollToTop />
         </LanguageProvider>
-        <Footer />
-        <ScrollToTop />
       </body>
     </html>
   );

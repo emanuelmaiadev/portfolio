@@ -1,41 +1,45 @@
-import { contactData } from "@/Data/data";
-import React from "react";
-import { FaEnvelope, FaMap, FaWhatsapp, FaGithub, FaLinkedin } from "react-icons/fa";
-
-const contacts = [
-  {
-    title: "WhatsApp",
-    content: contactData.whatsapp,
-    href: `https://wa.me/55${contactData.whatsapp}`,
-    icon: <FaWhatsapp />,
-  },
-  {
-    title: "E-mail",
-    content: contactData.email,
-    href: `mailto:${contactData.email}`,
-    icon: <FaEnvelope />,
-  },
-  {
-    title: "Address",
-    content: contactData.address,
-    href: null,
-    icon: <FaMap />,
-  },
-  {
-    title: "LinkedIn",
-    content: "linkedin.com/in/emanuelmaiadev",
-    href: "https://www.linkedin.com/in/emanuelmaiadev",
-    icon: <FaLinkedin />,
-  },
-  {
-    title: "GitHub",
-    content: "github.com/emanuelmaiadev",
-    href: "https://github.com/emanuelmaiadev",
-    icon: <FaGithub />,
-  },
-];
+import React from 'react';
+import { useLanguage } from "@/components/LanguageContext/LanguageContext";
+import { getTranslations } from "@/Data/translations";
+import { FaWhatsapp, FaMapMarkerAlt, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 const ContactInfo = () => {
+  const { language } = useLanguage();
+  const t = getTranslations(language);
+
+  const contacts = [
+    {
+      title: t.contact.whatsappLabel,
+      content: "+55 (85) 9XXXX-XXXX",
+      href: "https://wa.me/5585986",
+      icon: <FaWhatsapp />
+    },
+    {
+      title: t.contact.emailLabel,
+      content: "emanuel@example.com",
+      href: "mailto:emanuel@example.com",
+      icon: <MdEmail />
+    },
+    {
+      title: t.contact.addressLabel,
+      content: "Fortaleza, CE - Brazil",
+      icon: <FaMapMarkerAlt />
+    },
+    {
+      title: t.contact.linkedinLabel,
+      content: "linkedin.com/in/emanuel",
+      href: "https://linkedin.com/in/emanuel",
+      icon: <FaLinkedin />
+    },
+    {
+      title: t.contact.githubLabel,
+      content: "github.com/emanuel",
+      href: "https://github.com/emanuel",
+      icon: <FaGithub />
+    }
+  ];
+
   return (
     <div className="flex flex-col space-y-6">
       {contacts.map(({ title, content, href, icon }, idx) => (

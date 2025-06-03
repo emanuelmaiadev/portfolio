@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -22,7 +20,7 @@ type Props = {
 const Nav = ({ openNav }: Props) => {
   const [navBg, setNavBg] = useState(false);
   const { language, toggleLanguage } = useLanguage();
-  const t = getTranslations(language); 
+  const t = getTranslations(language);
 
   useEffect(() => {
     const handler = () => {
@@ -53,42 +51,49 @@ const Nav = ({ openNav }: Props) => {
         />
 
         {/* Nav Links & Buttons */}
-        <div className="flex items-center space-x-10">
+        <div className="flex items-center space-x-4">
           {/* Nav Links - Translated */}
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((navlink) => (
               <Link key={navlink.id} href={navlink.url}>
-                {/* Use translation based on navlink.id */}
                 <p className="nav__link">{t.navbar[navlink.id as keyof typeof t.navbar]}</p>
               </Link>
             ))}
           </div>
 
-          {/* Buttons */}
-          <div className="flex items-center space-x-4">
-            {/* Language Switch Button */}
-            <button
-              onClick={toggleLanguage} // Call the toggle function from context
-              className="px-4 py-2 text-white font-medium text-sm bg-purple-600 hover:bg-purple-700 transition-all duration-200 rounded-lg"
+          {/* Language Switch */}
+          <div className="relative flex items-center">
+            <div 
+              className="w-[100px] h-[36px] rounded-full bg-gray-800 flex items-center justify-between px-2 cursor-pointer"
+              onClick={toggleLanguage}
             >
-              {/* Show the label for the *other* language */} 
-              {t.navbar.toggleLang} 
-            </button>
-
-            {/* Hire Me Button - Translated */}
-            <a
-              href="#contact"
-              className="md:px-10 md:py-3 px-8 py-3 text-blue-800 font-semibold sm:text-base text-sm bg-white hover:bg-gray-200 transition-all duration-200 rounded-lg"
-            >
-              {t.navbar.hireMe} {/* Use translated text */}
-            </a>
-
-            {/* Burger Menu */}
-            <HiBars3BottomRight
-              onClick={openNav}
-              className="w-8 h-8 cursor-pointer text-white lg:hidden"
-            />
+              <span className={`text-sm font-medium ${language === 'en' ? 'text-white' : 'text-gray-400'}`}>
+                EN
+              </span>
+              <span className={`text-sm font-medium ${language === 'pt' ? 'text-white' : 'text-gray-400'}`}>
+                PT-BR
+              </span>
+              <div 
+                className={`absolute w-[46px] h-[28px] bg-purple-600 rounded-full transition-transform duration-300 ease-in-out ${
+                  language === 'pt' ? 'translate-x-[46px]' : 'translate-x-[2px]'
+                }`}
+              />
+            </div>
           </div>
+
+          {/* Hire Me Button - Translated */}
+          <a
+            href="#contact"
+            className="md:px-10 md:py-3 px-8 py-3 text-blue-800 font-semibold sm:text-base text-sm bg-white hover:bg-gray-200 transition-all duration-200 rounded-lg"
+          >
+            {t.navbar.hireMe}
+          </a>
+
+          {/* Burger Menu */}
+          <HiBars3BottomRight
+            onClick={openNav}
+            className="w-8 h-8 cursor-pointer text-white lg:hidden"
+          />
         </div>
       </div>
     </div>
@@ -96,4 +101,3 @@ const Nav = ({ openNav }: Props) => {
 };
 
 export default Nav;
-
