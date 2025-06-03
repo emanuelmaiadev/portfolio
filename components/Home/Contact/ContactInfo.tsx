@@ -36,8 +36,8 @@ const ContactInfo = () => {
     },
     {
       title: t.contact.githubLabel,
-      content: "github.com/emanuel",
-      href: "https://github.com/emanuel",
+      content: "github.com/emanuelmaiadev",
+      href: "https://github.com/emanuelmaiadev",
       icon: <FaGithub />
     }
   ];
