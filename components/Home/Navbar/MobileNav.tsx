@@ -12,7 +12,7 @@ type Props = {
 };
 
 const MobileNav = ({ closeNav, showNav }: Props) => {
-  const { language, toggleLanguage } = useLanguage();
+  const { language } = useLanguage();
   const t = getTranslations(language);
 
   const navOpen = showNav ? "translate-x-0" : "translate-x-[-100%]";
@@ -36,36 +36,6 @@ const MobileNav = ({ closeNav, showNav }: Props) => {
       <div
         className={`text-white ${navOpen} transform transition-all duration-500 delay-300 fixed justify-center flex flex-col h-full w-[80%] sm:w-[60%] bg-[#0f0715] space-y-6 z-[10000]`}
       >
-        {/* Language Switch */}
-        <div className="relative flex items-center mt-12 justify-center">
-          <div
-            className="relative w-[120px] h-[40px] bg-gray-800 rounded-full flex items-center cursor-pointer overflow-hidden"
-            onClick={toggleLanguage}
-          >
-            <div
-              className={`absolute w-[60px] h-full ${
-                language === "pt" ? "translate-x-[60px]" : "translate-x-0"
-              } bg-gradient-to-r from-purple-600 to-blue-600 transition-transform duration-300 ease-in-out`}
-            />
-            <div className="relative w-full h-full flex items-center justify-between px-4 text-sm font-medium">
-              <span
-                className={`${
-                  language === "en" ? "text-white" : "text-gray-400"
-                }`}
-              >
-                EN
-              </span>
-              <span
-                className={`${
-                  language === "pt" ? "text-white" : "text-gray-400"
-                }`}
-              >
-                PT
-              </span>
-            </div>
-          </div>
-        </div>
-
         {navLinks.map((navlink) => (
           <Link key={navlink.id} href={navlink.url}>
             <p className="nav__link text-[20px] border-b-[1.5px] pb-2 border-white sm:text-[30px]">
