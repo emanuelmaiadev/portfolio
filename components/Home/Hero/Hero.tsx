@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import { BaseInfo } from "@/Data/data";
 import { FaDownload } from "react-icons/fa";

@@ -1,3 +1,5 @@
+'use client'
+
 import SectionHeading from "@/components/Helper/SectionHeading";
 import { servicesData } from "@/Data/data";
 import React from "react";
