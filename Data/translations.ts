@@ -43,6 +43,8 @@ interface SectionTranslations {
     adaptabilityDesc: string;
     detailOrientedTitle: string;
     detailOrientedDesc: string;
+    udemyTitle: string;
+    udemyDesc: string;
   };
   skills: {
     title: string;
@@ -135,6 +137,9 @@ export const translations: LanguageTranslations = {
       detailOrientedTitle: "Detail Oriented",
       detailOrientedDesc:
         "Committed to writing clean and well-documented code. I catch the subtle bugs ensuring that nothing slips through the cracks",
+      udemyTitle: "Udemy Courses",
+      udemyDesc:
+        "Always Learning! Taking online courses focused on Cypress, React, TypeScript and more modern web dev practices.",
     },
     skills: {
       title: "MY SKILLS",
@@ -226,6 +231,9 @@ export const translations: LanguageTranslations = {
       detailOrientedTitle: "Orientado a Detalhes",
       detailOrientedDesc:
         "Comprometido em escrever código limpo e bem documentado. Posso detectar bugs sutis garantindo que nada passe despercebido.",
+      udemyTitle: "Cursos na Udemy",
+      udemyDesc:
+        "Sempre aprendendo! Fazendo cursos online focados em Cypress, React, TypeScript e mais práticas modernas de desenvolvimento web.",
     },
     skills: {
       title: "MINHAS HABILIDADES",

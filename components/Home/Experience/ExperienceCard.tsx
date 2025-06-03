@@ -37,6 +37,8 @@ const ExperienceCard = ({ service }: Props) => {
         return t.experience.adaptabilityTitle;
       case 8:
         return t.experience.detailOrientedTitle;
+      case 4:
+        return t.experience.udemyTitle;
       default:
         return service.title;
     }
@@ -59,6 +61,8 @@ const ExperienceCard = ({ service }: Props) => {
         return t.experience.adaptabilityDesc;
       case 8:
         return t.experience.detailOrientedDesc;
+      case 4:
+        return t.experience.udemyDesc;
       default:
         return service.description;
     }
