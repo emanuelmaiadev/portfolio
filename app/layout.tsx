@@ -4,7 +4,7 @@ import "./globals.css";
 import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 import Footer from "@/components/Home/Footer/Footer";
 import ScrollToTop from "@/components/Helper/ScrollToTop";
-
+import { LanguageProvider } from "@/components/LanguageContext/LanguageContext";
 
 const font = Sora({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${font.className}`}>
         <ResponsiveNav />
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
         <Footer />
         <ScrollToTop />
       </body>
