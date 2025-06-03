@@ -14,13 +14,13 @@ const ContactInfo = () => {
     {
       title: t.contact.whatsappLabel,
       content: "+55 (85) 992204871",
-      href: "https://wa.me/5585986",
+      href: "https://wa.me/5585992204871",
       icon: <FaWhatsapp />
     },
     {
       title: t.contact.emailLabel,
-      content: "emanuel@example.com",
-      href: "mailto:emanuel@example.com",
+      content: "emanuelmaiadev@gmail.com",
+      href: "mailto:emanuelmaiadev@gmail.com",
       icon: <MdEmail />
     },
     {
