@@ -30,8 +30,8 @@ const ContactInfo = () => {
     },
     {
       title: t.contact.linkedinLabel,
-      content: "linkedin.com/in/emanuel",
-      href: "https://linkedin.com/in/emanuel",
+      content: "linkedin.com/in/emanuelmaiadev",
+      href: "https://linkedin.com/in/emanuelmaiadev",
       icon: <FaLinkedin />
     },
     {
