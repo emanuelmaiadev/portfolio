@@ -14,11 +14,11 @@ const Hero = () => {
   const resumeFile = language === 'en' ? '/resume.pdf' : '/curriculo.pdf'; 
 
   return (
-    <div className="w-full h-screen bg-[#0f0715] flex items-center justify-center overflow-hidden relative">
+    <div className="w-full h-screen bg-[#0f0715] flex items-center">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 max-w-7xl mx-auto">
           {/* Text Content */}
-          <div className="text-center lg:text-left">
+          <div className="text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
             <h1
               data-aos="fade-left"
               className="text-2xl md:text-3xl lg:text-4xl mb-5 text-gray-300 font-semibold"
@@ -37,7 +37,7 @@ const Hero = () => {
             <p
               data-aos="fade-left"
               data-aos-delay="200"
-              className="mt-6 text-sm md:text-base text-white text-opacity-60 max-w-2xl mx-auto lg:mx-0"
+              className="mt-6 text-sm md:text-base text-white text-opacity-60"
             >
               {t.hero.description}
             </p>
