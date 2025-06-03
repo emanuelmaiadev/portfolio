@@ -1,6 +1,8 @@
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+"use client";
 
-type Language = 'en' | 'pt';
+import React, { createContext, useState, useContext, ReactNode } from "react";
+
+type Language = "en" | "pt";
 
 interface LanguageContextProps {
   language: Language;
@@ -8,17 +10,21 @@ interface LanguageContextProps {
   toggleLanguage: () => void;
 }
 
-const LanguageContext = createContext<LanguageContextProps | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextProps | undefined>(
+  undefined
+);
 
 interface LanguageProviderProps {
   children: ReactNode;
 }
 
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en'); 
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({
+  children,
+}) => {
+  const [language, setLanguage] = useState<Language>("en");
 
   const toggleLanguage = () => {
-    setLanguage((prevLanguage) => (prevLanguage === 'en' ? 'pt' : 'en'));
+    setLanguage((prevLanguage) => (prevLanguage === "en" ? "pt" : "en"));
   };
 
   return (
@@ -31,8 +37,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
 export const useLanguage = (): LanguageContextProps => {
   const context = useContext(LanguageContext);
   if (context === undefined) {
-    throw new Error('useLanguage must be used within a LanguageProvider');
+    throw new Error("useLanguage must be used within a LanguageProvider");
   }
   return context;
 };
-
