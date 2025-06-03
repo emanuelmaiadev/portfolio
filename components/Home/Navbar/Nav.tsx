@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { HiBars3BottomRight } from "react-icons/hi2";
 import { useLanguage } from "@/components/LanguageContext/LanguageContext";
 import { getTranslations } from "@/Data/translations";
@@ -46,56 +45,52 @@ const Nav = ({ openNav }: Props) => {
         {/* Logo */}
         <Image
           src="/images/logo.png"
-          alt="LOGO" 
+          alt="LOGO"
           width={120}
           height={120}
           className="h-[8vh] w-auto object-contain sm:h-[10vh]"
         />
 
         {/* Nav Links & Buttons */}
-        <div className="flex items-center space-x-4">
-          {/* Nav Links - Translated */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navLinks.map((navlink) => (
-              <Link key={navlink.id} href={navlink.url}>
-                <p className="nav__link">{t.navbar[navlink.id as keyof typeof t.navbar]}</p>
-              </Link>
+        <div className="flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.id}
+                href={link.url}
+                className="nav__link"
+              >
+                {t.navbar[link.id as keyof typeof t.navbar]}
+              </a>
             ))}
-          </div>
+          </nav>
 
-          {/* Language Switch */}
-          <div className="relative flex items-center">
-            <div 
-              className="w-[100px] h-[36px] rounded-full bg-gray-800 flex items-center justify-between px-2 cursor-pointer"
+          {/* Language Toggle */}
+          <div className="relative w-[120px] h-[40px] bg-gray-800 rounded-full flex items-center cursor-pointer overflow-hidden">
+            <div
+              className={`absolute w-[60px] h-full ${
+                language === 'pt' ? 'translate-x-[60px]' : 'translate-x-0'
+              } bg-gradient-to-r from-purple-600 to-blue-600 transition-transform duration-300 ease-in-out`}
+            />
+            <div
+              className="relative w-full h-full flex items-center justify-between px-4 text-sm font-medium"
               onClick={toggleLanguage}
             >
-              <span className={`text-sm font-medium ${language === 'en' ? 'text-white' : 'text-gray-400'}`}>
-                EN
-              </span>
-              <span className={`text-sm font-medium ${language === 'pt' ? 'text-white' : 'text-gray-400'}`}>
-                PT-BR
-              </span>
-              <div 
-                className={`absolute w-[46px] h-[28px] bg-purple-600 rounded-full transition-transform duration-300 ease-in-out ${
-                  language === 'pt' ? 'translate-x-[46px]' : 'translate-x-[2px]'
-                }`}
-              />
+              <span className={`${language === 'en' ? 'text-white' : 'text-gray-400'}`}>EN</span>
+              <span className={`${language === 'pt' ? 'text-white' : 'text-gray-400'}`}>PT</span>
             </div>
           </div>
 
-          {/* Hire Me Button - Translated */}
           <a
             href="#contact"
-            className="md:px-10 md:py-3 px-8 py-3 text-blue-800 font-semibold sm:text-base text-sm bg-white hover:bg-gray-200 transition-all duration-200 rounded-lg"
+            className="hidden md:block bg-blue-700 hover:bg-blue-900 text-white px-6 py-2 rounded-lg transition-all duration-200"
           >
             {t.navbar.hireMe}
           </a>
 
-          {/* Burger Menu */}
-          <HiBars3BottomRight
-            onClick={openNav}
-            className="w-8 h-8 cursor-pointer text-white lg:hidden"
-          />
+          <button onClick={openNav} className="block md:hidden text-white text-2xl">
+            <HiBars3BottomRight />
+          </button>
         </div>
       </div>
     </div>
