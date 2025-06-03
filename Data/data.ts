@@ -1,15 +1,21 @@
 export const BaseInfo = {
   name: "Emanuel Maia ",
-  position: "Front-End Developer and QA Analyst",
-  description:
-    "Hi, I’m Emanuel Maia, a Full Stack Developer focused on Front-End and QA. I work with JavaScript, React, Node.js, and testing tools like Cypress, Insomnia, and Postman. Currently, I’m a QA Analyst at Vegan Hive. Welcome and enjoy.",
+  position: {
+    en: "Front-End Developer and QA Analyst",
+    pt: "Desenvolvedor Front-End e Analista de QA",
+  },
+  description: {
+    en: "Hi, I'm Emanuel Maia, a Full Stack Developer focused on Front-End and QA. I work with JavaScript, React, Node.js, and testing tools like Cypress, Insomnia, and Postman. Currently, I'm a QA Analyst at Vegan Hive. Welcome and enjoy.",
+    pt: "Olá, sou Emanuel Maia, um Desenvolvedor Full Stack com foco em Front-End e QA. Trabalho com JavaScript, React, Node.js e ferramentas de teste como Cypress, Insomnia e Postman. Atualmente, sou Analista de QA na Vegan Hive. Seja bem-vindo(a) e aproveite.",
+  },
   profilePic: "/images/emanuelprofile.png",
 };
 
 export const aboutInfo = {
-  title: "Creating websites and Testing funcionalities with sharp precision and creativity",
+  title:
+    "Creating websites and Testing funcionalities with sharp precision and creativity",
   description:
-    "I don’t just write code — I engineer experiences that click, flow, and endure. Whether I’m shaping slick UIs with React and Tailwind or building solid APIs with Node.js, my focus is clear: performance, clarity, and style. On the QA side, I break things before users can, automating test flows with Cypress like a digital vigilante. Creative by nature, precise by practice, I blend frontend finesse with backend brain — always pushing for solutions that aren't just functional, but unforgettable.",
+    "I don't just write code — I engineer experiences that click, flow, and endure. Whether I'm shaping slick UIs with React and Tailwind or building solid APIs with Node.js, my focus is clear: performance, clarity, and style. On the QA side, I break things before users can, automating test flows with Cypress like a digital vigilante. Creative by nature, precise by practice, I blend frontend finesse with backend brain — always pushing for solutions that aren't just functional, but unforgettable.",
   client: "Currently on VeganHive",
   experience: "1+",
   project: "10+",
@@ -20,7 +26,8 @@ export const servicesData = [
   {
     id: 1,
     title: "VeganHive (currently)",
-    description: "QA Analyst E2E test automation using Cypress, focused on software quality and CI/CD integration.",
+    description:
+      "QA Analyst E2E test automation using Cypress, focused on software quality and CI/CD integration.",
     icon: "/images/s1.png",
   },
   {
@@ -54,19 +61,22 @@ export const servicesData = [
   {
     id: 6,
     title: "Creative Problem Solving",
-    description: "Thinking outside the box. Enjoy crafting smart, unconventional solutions — especially when challenges require flexible, innovative thinking.",
+    description:
+      "Thinking outside the box. Enjoy crafting smart, unconventional solutions — especially when challenges require flexible, innovative thinking.",
     icon: "/images/s6.png",
   },
   {
     id: 7,
     title: "Adaptability",
-    description: "Thrives in dynamic environments. Quick to learn new tools, embrace change, and adjust workflows to meet evolving project needs.",
+    description:
+      "Thrives in dynamic environments. Quick to learn new tools, embrace change, and adjust workflows to meet evolving project needs.",
     icon: "/images/s7.png",
   },
   {
     id: 8,
     title: "Detail Oriented",
-    description: "Committed to writing clean and well-documented code. I catch the subtle bugs ensuring that nothing slips through the cracks",
+    description:
+      "Committed to writing clean and well-documented code. I catch the subtle bugs ensuring that nothing slips through the cracks",
     icon: "/images/s8.png",
   },
 ];
@@ -232,6 +242,6 @@ export const blogs = [
 export const contactData = {
   phone: "+55 85 992204871",
   email: "emanuelmaiadev@gmail.com",
-  whatsapp:"85992204871",
+  whatsapp: "85992204871",
   address: "Fortaleza, Ceará , Brasil",
 };

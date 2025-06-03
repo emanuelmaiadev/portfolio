@@ -68,6 +68,13 @@ interface SectionTranslations {
     contact: string;
     copyright: string;
   };
+  cypress: {
+    portfolio: string;
+    question: string;
+    thinking: string;
+    success: string;
+    messages: string[];
+  };
 }
 
 interface LanguageTranslations {
@@ -88,8 +95,8 @@ export const translations: LanguageTranslations = {
     },
     hero: {
       greeting: `I am ${BaseInfo.name}`,
-      position: BaseInfo.position,
-      description: BaseInfo.description,
+      position: BaseInfo.position.en,
+      description: BaseInfo.description.en,
       downloadButton: "Download Resume",
     },
     about: {
@@ -153,6 +160,19 @@ export const translations: LanguageTranslations = {
       contact: "Contact",
       copyright: `© ${new Date().getFullYear()} All Rights Reserved by Emanuel Maia`,
     },
+    cypress: {
+      portfolio: "Portfolio Test",
+      question: "should ask a question",
+      thinking: "Thinking...",
+      success: "Awesome! Let's get to work!",
+      messages: [
+        "why",
+        "are you sure?",
+        "come on this was hard to do!",
+        "I would reconsider this decision",
+        "*site crashes*",
+      ],
+    },
   },
   pt: {
     navbar: {
@@ -166,9 +186,8 @@ export const translations: LanguageTranslations = {
     },
     hero: {
       greeting: `Eu sou ${BaseInfo.name}`,
-      position: BaseInfo.position,
-      description:
-        "Olá, sou Emanuel Maia, um Desenvolvedor Full Stack com foco em Front-End e QA. Trabalho com JavaScript, React, Node.js e ferramentas de teste como Cypress, Insomnia e Postman. Atualmente, sou Analista de QA na Vegan Hive. Seja bem-vindo(a) e aproveite.",
+      position: BaseInfo.position.pt,
+      description: BaseInfo.description.pt,
       downloadButton: "Baixar Currículo",
     },
     about: {
@@ -231,6 +250,19 @@ export const translations: LanguageTranslations = {
       skills: "Habilidades",
       contact: "Contato",
       copyright: `© ${new Date().getFullYear()} Todos os Direitos Reservados por Emanuel Maia`,
+    },
+    cypress: {
+      portfolio: "Teste do Portfólio",
+      question: "deve fazer uma pergunta",
+      thinking: "Pensando...",
+      success: "Irado! Vamos trabalhar!",
+      messages: [
+        "por que?",
+        "tem certeza?",
+        "poxa, foi difícil fazer isso aqui!",
+        "eu repensaria essa decisão",
+        "*site quebra*",
+      ],
     },
   },
 };

@@ -4,8 +4,14 @@ import confetti from "canvas-confetti";
 
 // List of technologies to simulate loading
 const techs = [
-  "HTML", "CSS", "Tailwind", "React", "TypeScript",
-  "NodeJS", "Insomnia", "Cypress"
+  "HTML",
+  "CSS",
+  "Tailwind",
+  "React",
+  "TypeScript",
+  "NodeJS",
+  "Insomnia",
+  "Cypress",
 ];
 
 // Fallback questions to simulate resistance
@@ -14,7 +20,7 @@ const fallbackQuestions = [
   "Are you sure?",
   "I'd rethink that decision!",
   "Come on! This was hard to do!",
-  "You're gonna fail the test..."
+  "You're gonna fail the test...",
 ];
 
 const CypressSimulation = () => {
@@ -55,7 +61,7 @@ const CypressSimulation = () => {
     confetti({
       particleCount: 100,
       spread: 70,
-      origin: { y: 0.6 }
+      origin: { y: 0.6 },
     });
   };
 
@@ -137,15 +143,27 @@ const CypressSimulation = () => {
         {/* Test log section */}
         <div className="p-4 space-y-1">
           <div className="text-green-500">&gt; Running: portfolio.cy.js</div>
-          <div><span className="text-green-500">✓</span> Visit homepage</div>
-          {testStep > 0 && <div><span className="text-green-500">✓</span> Locate About section</div>}
-          {testStep > 1 && <div><span className="text-green-500">✓</span> Validate skills listed</div>}
+          <div>
+            <span className="text-green-500">✓</span> Visit homepage
+          </div>
+          {testStep > 0 && (
+            <div>
+              <span className="text-green-500">✓</span> Locate About section
+            </div>
+          )}
+          {testStep > 1 && (
+            <div>
+              <span className="text-green-500">✓</span> Validate skills listed
+            </div>
+          )}
 
           {/* Technology loading steps */}
           {testStep > 2 && result === null && (
             <div className="mt-4">
               {techs.slice(0, techStep).map((tech, index) => (
-                <div key={index}><span className="text-green-500">✓</span> Loading {tech}</div>
+                <div key={index}>
+                  <span className="text-green-500">✓</span> Loading {tech}
+                </div>
               ))}
 
               {techStep >= techs.length && (
