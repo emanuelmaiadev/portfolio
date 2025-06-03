@@ -1,4 +1,4 @@
-"use client"
+"use client"; 
 
 import Nav from './Nav'
 import MobileNav from './MobileNav'
@@ -18,3 +18,4 @@ const ResponsiveNav = () => {
 }
 
 export default ResponsiveNav
+

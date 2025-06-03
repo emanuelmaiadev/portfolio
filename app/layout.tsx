@@ -24,8 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${font.className}`}>
-        <ResponsiveNav />
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          <ResponsiveNav />
+          {children}
+        </LanguageProvider>
         <Footer />
         <ScrollToTop />
       </body>
